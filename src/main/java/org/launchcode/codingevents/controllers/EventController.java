@@ -29,7 +29,7 @@ public class EventController {
     @GetMapping("create")
     public String displayCreateEventForm(Model model) {
         model.addAttribute("title", "Create Event");
-        model.addAttribute(new Event());//this empty event have an id
+        model.addAttribute(new Event());
         model.addAttribute("types", EventType.values());
         return "events/create";
     }
@@ -61,6 +61,7 @@ public class EventController {
                 EventData.remove(id);
             }
         }
+
         return "redirect:/events";
     }
 
