@@ -41,7 +41,6 @@ public class EventController {
             model.addAttribute("title", "Create Event");
             return "events/create";
         }
-
         EventData.add(newEvent);
         return "redirect:/events";
     }
@@ -61,7 +60,6 @@ public class EventController {
                 EventData.remove(id);
             }
         }
-
         return "redirect:/events";
     }
 
