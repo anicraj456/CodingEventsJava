@@ -39,5 +39,4 @@ public class EventController {
         events.add(new Event(eventName, eventDescription));
         return "redirect:/events";
     }
-
 }
