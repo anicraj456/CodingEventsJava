@@ -16,11 +16,8 @@ import org.springframework.validation.Errors;
 @Controller
 @RequestMapping("events")
 public class EventController {
-
     @Autowired
     private EventRepository eventRepository;
-
-    // findAll, save, findById
 
     @GetMapping
     public String displayAllEvents(Model model) {
@@ -44,6 +41,7 @@ public class EventController {
             model.addAttribute("title", "Create Event");
             return "events/create";
         }
+
         eventRepository.save(newEvent);
         return "redirect:/events";
     }
@@ -63,6 +61,7 @@ public class EventController {
                 eventRepository.deleteById(id);
             }
         }
+
         return "redirect:/events";
     }
 
