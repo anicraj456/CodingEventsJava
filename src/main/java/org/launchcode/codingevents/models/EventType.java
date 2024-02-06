@@ -9,6 +9,7 @@ public enum EventType {
     MEETUP("Meetup"),
     WORKSHOP("Workshop"),
     SOCIAL("Social");
+
     private final String displayName;
 
     EventType(String displayName) {
