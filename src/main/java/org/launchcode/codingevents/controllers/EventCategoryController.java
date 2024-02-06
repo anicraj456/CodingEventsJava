@@ -30,6 +30,7 @@ public class EventCategoryController {
     public String renderCreateEventCategoryForm(Model model) {
         model.addAttribute("title", "Create Category");
         model.addAttribute(new EventCategory());
+
         return "eventCategories/create";
     }
 
@@ -39,7 +40,6 @@ public class EventCategoryController {
 
         if (errors.hasErrors()) {
             model.addAttribute("title", "Create Category");
-            model.addAttribute(new EventCategory());
             return "eventCategories/create";
         }
 
